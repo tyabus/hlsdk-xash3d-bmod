@@ -40,7 +40,7 @@
 
 // Fill this in with the title of your bubblemod branch
 #define BMOD_BRANCH_NAME	"Bubblemod+"
-/
+//
 // The version of your branch
 #define BMOD_BRANCH_VERSION	"1.0.3"
 
