@@ -61,7 +61,7 @@ void PrintMessage( CBaseEntity *pEnt, int iChannel, Vector vecColor, Vector vecT
 
 		sprintf(szText, "BUBBLE MOD - http://www.bubblemod.org\n%s Version %s - %s-%s\n\nCurrent Map: %s\nBHOP Cap: %s\nTime Left: %s\nFrags Left: %i/%i",
 		BMOD_BRANCH_NAME,
-		BMOD_BRANCH_VERSION,
+		BMOD_BRANCH_COMMIT,
 		BMOD_PLATFORM, 
 		BMOD_ARCH,
 		CVAR_GET_STRING("bm_map"), 

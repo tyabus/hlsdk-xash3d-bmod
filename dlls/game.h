@@ -44,7 +44,6 @@ extern cvar_t *g_footsteps;
 #endif // GAME_H
 
 // BMOD Begin - CVARs
-extern cvar_t	bm_ver;
 extern cvar_t	bm_url;
 extern cvar_t	bm_bver;
 extern cvar_t	bm_bname;

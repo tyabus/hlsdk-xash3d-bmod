@@ -30,27 +30,18 @@
 
 // ---------------------------------------------------------------
 // Branch customizations
-// Information in the next three constants will be used for servers
-// running your mod on the BubbleWatch pages on bubblemod.org. Fill
-// these in with the information you would like to appear on that page.
-// 
-// If you do NOT want servers running your branch to appear on the 
-// BubbleWatch page, simply set BMOD_VERSION below to "", or run your
-// server with no master server reporting.
 
 // Fill this in with the title of your bubblemod branch
 #define BMOD_BRANCH_NAME	"Bubblemod+"
 //
-// The version of your branch
-#define BMOD_BRANCH_VERSION	"1.0.3"
+// The commit of your branch
+#define BMOD_BRANCH_COMMIT	BMOD_BUILD_COMMIT
 
 // The URL of the website describing your branch
 #define BMOD_BRANCH_URL		"https://github.com/tyabus/hlsdk-xash3d-bmod"
 
 // End branch customizations
 // ---------------------------------------------------------------
-
-#define BMOD_VERSION			""
 
 #if defined(_WIN32) && defined(_MSC_VER)
 #define BMOD_PLATFORM			"WIN32"

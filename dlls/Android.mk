@@ -3,6 +3,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+BMOD_COMMIT := $(firstword $(shell cd $(LOCAL_PATH)&&git rev-parse --short=6 HEAD) unknown)
+
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := server
@@ -13,7 +15,7 @@ ifeq ($(TARGET_ARCH_ABI),armeabi-v7a-hard)
 LOCAL_MODULE_FILENAME = libserver_hardfp
 endif
 
-LOCAL_CFLAGS += -D_LINUX -DCLIENT_WEAPONS -fvisibility=hidden -Dstricmp=strcasecmp -Dstrnicmp=strncasecmp -D_snprintf=snprintf \
+LOCAL_CFLAGS += -D_LINUX -DCLIENT_WEAPONS -DBMOD_BUILD_COMMIT=\"$(BMOD_COMMIT)\" -fvisibility=hidden -Dstricmp=strcasecmp -Dstrnicmp=strncasecmp -D_snprintf=snprintf \
 	-fno-exceptions -DNO_VOICEGAMEMGR -w
 
 LOCAL_CPPFLAGS := $(LOCAL_CFLAGS)

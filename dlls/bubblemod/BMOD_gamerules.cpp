@@ -359,9 +359,8 @@ void CHalfLifeMultiplay :: BMOD_Think ( void )
 
 	if (setVarsTime < gpGlobals->time ) 
 	{
-		g_engfuncs.pfnCvar_DirectSet( &bm_ver, UTIL_VarArgs( "%s", BMOD_VERSION ) );
 		g_engfuncs.pfnCvar_DirectSet( &bm_bname, UTIL_VarArgs( "%s", BMOD_BRANCH_NAME ) );
-		g_engfuncs.pfnCvar_DirectSet( &bm_bver, UTIL_VarArgs( "%s", BMOD_BRANCH_VERSION ) );
+		g_engfuncs.pfnCvar_DirectSet( &bm_bver, UTIL_VarArgs( "%s", BMOD_BRANCH_COMMIT ) );
 		g_engfuncs.pfnCvar_DirectSet( &bm_burl, UTIL_VarArgs( "%s", BMOD_BRANCH_URL ) );
 		
 		BMOD_UpdateGuns();
