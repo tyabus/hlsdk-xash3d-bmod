@@ -411,7 +411,7 @@ BOOL CRpg::Deploy()
 	{
 		return DefaultDeploy( "models/v_rpg.mdl", "models/p_rpg.mdl", RPG_DRAW_UL, "rpg" );
 	}
-
+	g_engfuncs.pfnSetClientMaxspeed(m_pPlayer->edict(), 200 );
 	return DefaultDeploy( "models/v_rpg.mdl", "models/p_rpg.mdl", RPG_DRAW1, "rpg" );
 }
 
@@ -429,7 +429,7 @@ BOOL CRpg::CanHolster( void )
 void CRpg::Holster( int skiplocal /* = 0 */ )
 {
 	m_fInReload = FALSE;// cancel any reload in progress.
-
+	g_engfuncs.pfnSetClientMaxspeed(m_pPlayer->edict(), 0 );
 	m_pPlayer->m_flNextAttack = UTIL_WeaponTimeBase() + 0.5;
 
 	SendWeaponAnim( RPG_HOLSTER1 );

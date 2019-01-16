@@ -92,6 +92,7 @@ void CEgon::Precache( void )
 
 BOOL CEgon::Deploy( void )
 {
+	g_engfuncs.pfnSetClientMaxspeed(m_pPlayer->edict(), 150 );
 	m_deployed = FALSE;
 	m_fireState = FIRE_OFF;
 	return DefaultDeploy( "models/v_egon.mdl", "models/p_egon.mdl", EGON_DRAW, "egon" );
@@ -111,6 +112,7 @@ int CEgon::AddToPlayer( CBasePlayer *pPlayer )
 
 void CEgon::Holster( int skiplocal /* = 0 */ )
 {
+	g_engfuncs.pfnSetClientMaxspeed(m_pPlayer->edict(), 0 );
 	m_pPlayer->m_flNextAttack = UTIL_WeaponTimeBase() + 0.5;
 	SendWeaponAnim( EGON_HOLSTER );
 
