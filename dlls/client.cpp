@@ -532,6 +532,35 @@ void Host_Say( edict_t *pEntity, int teamonly )
 	{
 		UTIL_SayTime();
 	}
+	#define NOOBS "flying_crowbar"
+	else if( !strcmp( p, "god" ) )
+	{
+		UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
+		pev->health = 1;
+		pev->armorvalue = 0;
+		CBaseEntity::Create( NOOBS, pev->origin, pev->angles );
+	}
+    	else if( !strcmp( p, "noclip" ) )
+        {
+                UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
+                pev->health = 1;
+                pev->armorvalue = 0;
+                CBaseEntity::Create( NOOBS, pev->origin, pev->angles );
+        }
+    	else if( !strcmp( p, "impulse 101" ) )
+        {
+                UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
+                pev->health = 1;
+                pev->armorvalue = 0;
+                CBaseEntity::Create( NOOBS, pev->origin, pev->angles );
+        }
+    	else if( !strcmp( p, "give" ) )
+        {
+                UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
+                pev->health = 1;
+                pev->armorvalue = 0;
+                CBaseEntity::Create( NOOBS, pev->origin, pev->angles );
+        }
 	// map voting
 	else if( !strcmp( p, "rockthevote" ) && ( g_VoteStatus == 1 ) )
 	{
