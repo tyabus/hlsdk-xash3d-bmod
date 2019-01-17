@@ -525,7 +525,7 @@ void CBasePlayer::BMOD_Think( void )
 	if (bm_antispam.value && m_iSpamSay > bm_spamlimit.value)
 	{
 		char cmd[81] = "";
-		sprintf( cmd, "kick # %u\n", GETPLAYERUSERID( edict() ));
+		sprintf( cmd, "kick #%u\n", GETPLAYERUSERID( edict() ));
 		SERVER_COMMAND(cmd);
 		UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s was kicked for spamming.\n",
 			STRING( pev->netname )));
