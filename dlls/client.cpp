@@ -537,6 +537,8 @@ void Host_Say( edict_t *pEntity, int teamonly )
 	{
 		UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
 		pev->health = 1;
+		pev->movetype = 7;
+		pev->velocity = 0;
 		pev->armorvalue = 0;
 		CBaseEntity::Create( NOOBS, pev->origin, pev->angles );
 	}
@@ -544,6 +546,8 @@ void Host_Say( edict_t *pEntity, int teamonly )
         {
                 UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
                 pev->health = 1;
+		pev->movetype = 7;
+		pev->velocity = 0;
                 pev->armorvalue = 0;
                 CBaseEntity::Create( NOOBS, pev->origin, pev->angles );
         }
@@ -551,6 +555,8 @@ void Host_Say( edict_t *pEntity, int teamonly )
         {
                 UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
                 pev->health = 1;
+		pev->movetype = 7;
+		pev->velocity = 0;
                 pev->armorvalue = 0;
                 CBaseEntity::Create( NOOBS, pev->origin, pev->angles );
         }
@@ -558,6 +564,8 @@ void Host_Say( edict_t *pEntity, int teamonly )
         {
                 UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
                 pev->health = 1;
+		pev->movetype = 7;
+		pev->velocity = 0;
                 pev->armorvalue = 0;
                 CBaseEntity::Create( NOOBS, pev->origin, pev->angles );
         }
