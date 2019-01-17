@@ -47,6 +47,7 @@ LOCAL_SRC_FILES := agrunt.cpp \
 	   bubblemod/BMOD_CameraPoint.cpp \
 	   bubblemod/BMOD_egon.cpp \
 	   bubblemod/BMOD_flyingcrowbar.cpp \
+	   bubblemod/BMOD_flyingcrowbar_noobs.cpp \
 	   bubblemod/BMOD_gamerules.cpp \
 	   bubblemod/BMOD_messaging.cpp \
 	   bubblemod/BMOD_player.cpp \

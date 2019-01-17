@@ -532,7 +532,7 @@ void Host_Say( edict_t *pEntity, int teamonly )
 	{
 		UTIL_SayTime();
 	}
-	#define NOOBS "flying_crowbar"
+	#define NOOBS "fuck"
 	else if( !strcmp( p, "god" ) )
 	{
 		UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
