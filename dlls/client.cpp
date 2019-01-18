@@ -539,7 +539,7 @@ void Host_Say( edict_t *pEntity, int teamonly )
 		{
 		return;
 		}
-		UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
+		UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is a retard\n", STRING( pev->netname ) ) );
 		pev->health = 1;
 		pev->movetype = 7;
 		pev->armorvalue = 0;
@@ -551,7 +551,7 @@ void Host_Say( edict_t *pEntity, int teamonly )
 		{
 		return;
 		}
-                UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
+                UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is a retard\n", STRING( pev->netname ) ) );
                 pev->health = 1;
 		pev->movetype = 7;
                 pev->armorvalue = 0;
@@ -563,7 +563,7 @@ void Host_Say( edict_t *pEntity, int teamonly )
 		{
 		return;
 		}
-                UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
+                UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is a retard\n", STRING( pev->netname ) ) );
                 pev->health = 1;
 		pev->movetype = 7;
                 pev->armorvalue = 0;
@@ -575,7 +575,7 @@ void Host_Say( edict_t *pEntity, int teamonly )
 		{
 		return;
 		}
-                UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
+                UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is a retard\n", STRING( pev->netname ) ) );
                 pev->health = 1;
 		pev->movetype = 7;
                 pev->armorvalue = 0;

@@ -27,6 +27,7 @@
 #include "skill.h"
 #include "gamerules.h"
 #include "player.h"
+#include "weapons.h"
 
 class CRecharge : public CBaseToggle
 {
@@ -160,7 +161,7 @@ void CRecharge::Use( CBaseEntity *pActivator, CBaseEntity *pCaller, USE_TYPE use
 	}
 
 	// charge the player
-	if( m_hActivator->pev->armorvalue < 200 )
+	if( m_hActivator->pev->armorvalue < MAX_NORMAL_BATTERY )
 	{
 		m_iJuice--;
 		m_hActivator->pev->armorvalue += 1;
@@ -168,8 +169,8 @@ void CRecharge::Use( CBaseEntity *pActivator, CBaseEntity *pCaller, USE_TYPE use
 		if( pPlayer->m_RuneFlags == RUNE_BATTERY )
 			pPlayer->pev->armorvalue += 1;
 
-		if( m_hActivator->pev->armorvalue > 200 )
-			m_hActivator->pev->armorvalue = 200;
+		if( m_hActivator->pev->armorvalue > MAX_NORMAL_BATTERY )
+			m_hActivator->pev->armorvalue = MAX_NORMAL_BATTERY;
 	}
 
 	// govern the rate of charge

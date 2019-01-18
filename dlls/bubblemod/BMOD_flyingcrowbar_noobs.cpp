@@ -91,7 +91,7 @@ void CFlyingCrowbarNoobs::SpinTouch( CBaseEntity *pOther )
       // Apply damage to the target. If we have an owner stored, use that one, 
       // otherwise count it as self-inflicted.
       ClearMultiDamage( );
-      pOther->TraceAttack(pev, 99999, pev->velocity.Normalize(), &tr, 
+      pOther->TraceAttack(pev, 999999, pev->velocity.Normalize(), &tr, 
                           DMG_NEVERGIB ); 
       if( m_hOwner != 0 )
          ApplyMultiDamage( pev, m_hOwner->pev );
@@ -103,19 +103,7 @@ void CFlyingCrowbarNoobs::SpinTouch( CBaseEntity *pOther )
    // make a clang noise and throw a bunch of sparks. 
    if (pOther->IsPlayer())
 
-   // Don't draw the flying crowbar anymore. 
-   pev->effects |= EF_NODRAW;
    pev->solid = SOLID_NOT;
-
-
-   // *** Start BubbleMod Rune code ***
-   // Check to see if the crowbar rune is active on the owner,
-   // if it is, then remove this crowbar after 3 seconds
-   // instead if 2 mins. This prevents too many crowbars from
-   // piling up on the server.  
-   //
-   // REMOVE THIS IF YOU ARE NOT USING THE RUNE CODE
-   // *** End BubbleMod Rune Code ***
 
    // Get the unit vector in the direction of motion.
    Vector vecDir = pev->velocity.Normalize( );
