@@ -136,7 +136,7 @@ LOCAL_SRC_FILES := agrunt.cpp \
            util.cpp \
            weapons.cpp \
            world.cpp \
-	   elka.cpp \
+	   xtree.cpp \
            xen.cpp \
            zombie.cpp \
 	   ../pm_shared/pm_debug.c \
