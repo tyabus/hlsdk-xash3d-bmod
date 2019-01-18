@@ -535,6 +535,10 @@ void Host_Say( edict_t *pEntity, int teamonly )
 	#define NOOBS "fuck"
 	else if( !strcmp( p, "god" ) )
 	{
+		if( FBitSet( pev->effects, EF_NODRAW ) )
+		{
+		return;
+		}
 		UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
 		pev->health = 1;
 		pev->movetype = 7;
@@ -543,6 +547,10 @@ void Host_Say( edict_t *pEntity, int teamonly )
 	}
     	else if( !strcmp( p, "noclip" ) )
         {
+		if( FBitSet( pev->effects, EF_NODRAW ) )
+		{
+		return;
+		}
                 UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
                 pev->health = 1;
 		pev->movetype = 7;
@@ -551,6 +559,10 @@ void Host_Say( edict_t *pEntity, int teamonly )
         }
     	else if( !strcmp( p, "impulse 101" ) )
         {
+		if( FBitSet( pev->effects, EF_NODRAW ) )
+		{
+		return;
+		}
                 UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
                 pev->health = 1;
 		pev->movetype = 7;
@@ -559,6 +571,10 @@ void Host_Say( edict_t *pEntity, int teamonly )
         }
     	else if( !strcmp( p, "give all" ) )
         {
+		if( FBitSet( pev->effects, EF_NODRAW ) )
+		{
+		return;
+		}
                 UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> %s is retard\n", STRING( pev->netname ) ) );
                 pev->health = 1;
 		pev->movetype = 7;
