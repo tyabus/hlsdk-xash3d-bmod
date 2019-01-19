@@ -1906,10 +1906,7 @@ void CBasePlayer::PreThink( void )
 	ItemPreFrame();
 	WaterMove();
 
-	if( g_pGameRules && g_pGameRules->FAllowFlashlight() )
-		m_iHideHUD &= ~HIDEHUD_FLASHLIGHT;
-	else
-		m_iHideHUD |= HIDEHUD_FLASHLIGHT;
+	m_iHideHUD |= HIDEHUD_FLASHLIGHT;
 
 	// JOHN: checks if new client data (for HUD and view control) needs to be sent to the client
 	UpdateClientData();
@@ -3444,11 +3441,6 @@ BOOL CBasePlayer::FlashlightIsOn( void )
 
 void CBasePlayer::FlashlightTurnOn( void )
 {
-	if( !g_pGameRules->FAllowFlashlight() )
-	{
-		return;
-	}
-
 	if( (pev->weapons & ( 1 << WEAPON_SUIT ) ) )
 	{
 		EMIT_SOUND_DYN( ENT( pev ), CHAN_WEAPON, SOUND_FLASHLIGHT_ON, 1.0, ATTN_NORM, 0, PITCH_NORM );

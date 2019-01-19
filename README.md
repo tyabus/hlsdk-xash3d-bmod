@@ -1,2 +1,3 @@
-# hlsdk-xash3d-bmod
-https://github.com/nekonomicon/hlsdk-xash3d/tree/bubblemod
+# BUBBLEMOD Plus!
+A half-life sdk modification!
+based on: https://github.com/nekonomicon/hlsdk-xash3d/tree/bubblemod

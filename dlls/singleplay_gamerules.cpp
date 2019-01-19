@@ -317,3 +317,8 @@ int CHalfLifeRules::PlayerRelationship( CBaseEntity *pPlayer, CBaseEntity *pTarg
 	// why would a single player in half life need this? 
 	return GR_NOTTEAMMATE;
 }
+
+BOOL CHalfLifeRules::FAntiNoob( void )
+{
+	return FALSE;
+}

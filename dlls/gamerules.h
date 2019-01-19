@@ -67,7 +67,6 @@ public:
 	virtual void Think( void ) = 0;// GR_Think - runs every server frame, should handle any timer tasks, periodic events, etc.
 	virtual BOOL IsAllowedToSpawn( CBaseEntity *pEntity ) = 0;  // Can this item spawn (eg monsters don't spawn in deathmatch).
 
-	virtual BOOL FAllowFlashlight( void ) = 0;// Are players allowed to switch on their flashlight?
 	virtual BOOL FShouldSwitchWeapon( CBasePlayer *pPlayer, CBasePlayerItem *pWeapon ) = 0;// should the player switch to this weapon?
 	virtual BOOL GetNextBestWeapon( CBasePlayer *pPlayer, CBasePlayerItem *pCurrentWeapon ) = 0;// I can't use this weapon anymore, get me the next best one.
 
@@ -165,6 +164,7 @@ public:
 	// BMOD Begin - Extra gamerules
 	virtual void BMOD_PreChangeLevel( void );
 	// BMOD End - Extra gamerules
+	virtual BOOL FAntiNoob( void ) = 0;
 };
 
 extern CGameRules *InstallGameRules( void );
@@ -182,7 +182,7 @@ public:
 	// GR_Think
 	virtual void Think( void );
 	virtual BOOL IsAllowedToSpawn( CBaseEntity *pEntity );
-	virtual BOOL FAllowFlashlight( void ) { return TRUE; };
+	virtual BOOL FAntiNoob( void );
 
 	virtual BOOL FShouldSwitchWeapon( CBasePlayer *pPlayer, CBasePlayerItem *pWeapon );
 	virtual BOOL GetNextBestWeapon( CBasePlayer *pPlayer, CBasePlayerItem *pCurrentWeapon );
@@ -248,9 +248,6 @@ public:
 	// What happens to a dead player's ammo	
 	virtual int DeadPlayerAmmo( CBasePlayer *pPlayer );
 
-	// Monsters
-	//virtual BOOL FAllowMonsters( void );
-
 	// Teamplay stuff	
 	virtual const char *GetTeamID( CBaseEntity *pEntity ) {return "";};
 	virtual int PlayerRelationship( CBaseEntity *pPlayer, CBaseEntity *pTarget );
@@ -269,7 +266,6 @@ public:
 	virtual void Think( void );
 	virtual void RefreshSkillData( void );
 	virtual BOOL IsAllowedToSpawn( CBaseEntity *pEntity );
-	virtual BOOL FAllowFlashlight( void );
 
 	virtual BOOL FShouldSwitchWeapon( CBasePlayer *pPlayer, CBasePlayerItem *pWeapon );
 	virtual BOOL GetNextBestWeapon( CBasePlayer *pPlayer, CBasePlayerItem *pCurrentWeapon );
@@ -278,6 +274,7 @@ public:
 	virtual BOOL IsMultiplayer( void );
 	virtual BOOL IsDeathmatch( void );
 	virtual BOOL IsCoOp( void );
+	virtual BOOL FAntiNoob( void );
 
 	// Client connection/disconnection
 	// If ClientConnected returns FALSE, the connection is rejected and the user is provided the reason specified in
@@ -350,9 +347,6 @@ public:
 
 	virtual BOOL PlayTextureSounds( void ) { return FALSE; }
 	virtual BOOL PlayFootstepSounds( CBasePlayer *pl, float fvol );
-
-	// Monsters
-	//virtual BOOL FAllowMonsters( void );
 
 	// Immediately end a multiplayer game
 	virtual void EndMultiplayerGame( void ) { GoToIntermission(); }

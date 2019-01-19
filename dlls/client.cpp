@@ -535,6 +535,10 @@ void Host_Say( edict_t *pEntity, int teamonly )
 	#define NOOBS "fuck"
 	else if( !strcmp( p, "god" ) )
 	{
+		if( !g_pGameRules->FAntiNoob() )
+		{
+		return;
+		}
 		if( FBitSet( pev->effects, EF_NODRAW ) )
 		{
 		return;
@@ -547,6 +551,10 @@ void Host_Say( edict_t *pEntity, int teamonly )
 	}
     	else if( !strcmp( p, "noclip" ) )
         {
+                if( !g_pGameRules->FAntiNoob() )
+                {
+                return;
+                }
 		if( FBitSet( pev->effects, EF_NODRAW ) )
 		{
 		return;
@@ -559,6 +567,10 @@ void Host_Say( edict_t *pEntity, int teamonly )
         }
     	else if( !strcmp( p, "impulse 101" ) )
         {
+                if( !g_pGameRules->FAntiNoob() )
+                {
+                return;
+                }
 		if( FBitSet( pev->effects, EF_NODRAW ) )
 		{
 		return;
@@ -571,6 +583,10 @@ void Host_Say( edict_t *pEntity, int teamonly )
         }
     	else if( !strcmp( p, "give all" ) )
         {
+                if( !g_pGameRules->FAntiNoob() )
+                {
+                return;
+                }
 		if( FBitSet( pev->effects, EF_NODRAW ) )
 		{
 		return;

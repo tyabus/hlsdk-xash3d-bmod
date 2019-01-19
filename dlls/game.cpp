@@ -37,13 +37,13 @@ cvar_t weaponstay	= { "mp_weaponstay","0", FCVAR_SERVER };
 cvar_t selfgauss	= { "mp_selfgauss", "1", FCVAR_SERVER };
 cvar_t satchelfix	= { "mp_satchelfix", "0", FCVAR_SERVER };
 cvar_t forcerespawn	= { "mp_forcerespawn","1", FCVAR_SERVER };
-cvar_t flashlight	= { "mp_flashlight","0", FCVAR_SERVER };
 cvar_t aimcrosshair	= { "mp_autocrosshair","1", FCVAR_SERVER };
 cvar_t decalfrequency	= { "decalfrequency","30", FCVAR_SERVER };
 cvar_t teamlist		= { "mp_teamlist","hgrunt;scientist", FCVAR_SERVER };
 cvar_t teamoverride	= { "mp_teamoverride","1" };
 cvar_t defaultteam	= { "mp_defaultteam","0" };
 cvar_t bhopcap		= { "mp_bhopcap", "1", FCVAR_SERVER };
+cvar_t antinoobs	= { "mp_antinoobs", "1", FCVAR_SERVER };
 
 cvar_t allow_spectators = { "allow_spectators", "0", FCVAR_SERVER };	// 0 prevents players from being spectators
 
@@ -570,13 +570,13 @@ void GameDLLInit( void )
 	CVAR_REGISTER( &selfgauss );
 	CVAR_REGISTER( &satchelfix );
 	CVAR_REGISTER( &forcerespawn );
-	CVAR_REGISTER( &flashlight );
 	CVAR_REGISTER( &aimcrosshair );
 	CVAR_REGISTER( &decalfrequency );
 	CVAR_REGISTER( &teamlist );
 	CVAR_REGISTER( &teamoverride );
 	CVAR_REGISTER( &defaultteam );
 	CVAR_REGISTER( &bhopcap );
+	CVAR_REGISTER( &antinoobs );
 
 	CVAR_REGISTER( &mp_chattime );
 

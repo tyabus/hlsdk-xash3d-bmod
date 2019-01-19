@@ -147,6 +147,12 @@ CHalfLifeMultiplay::CHalfLifeMultiplay()
 	UTIL_SaveRestorePlayer( NULL, 0, 1 );
 }
 
+
+BOOL CHalfLifeMultiplay::FAntiNoob( void )
+{
+        return ( antinoobs.value != 0 );
+}
+
 BOOL CHalfLifeMultiplay::ClientCommand( CBasePlayer *pPlayer, const char *pcmd )
 {
 #ifndef NO_VOICEGAMEMGR
@@ -1477,11 +1483,6 @@ BOOL CHalfLifeMultiplay::PlayFootstepSounds( CBasePlayer *pl, float fvol )
 		return TRUE;  // only make step sounds in multiplayer if the player is moving fast enough
 
 	return FALSE;
-}
-
-BOOL CHalfLifeMultiplay::FAllowFlashlight( void )
-{
-	return flashlight.value != 0; 
 }
 
 //=========================================================
