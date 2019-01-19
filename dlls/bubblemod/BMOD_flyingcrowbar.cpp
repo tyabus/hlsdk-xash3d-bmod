@@ -79,7 +79,8 @@ void CFlyingCrowbar::Precache( )
 {
 if( !bm_cbar_mod.value )
         {
-                return;
+	pev->flags = FL_KILLME;
+        return;
         }
    PRECACHE_MODEL ("models/w_crowbar.mdl");
    PRECACHE_SOUND ("weapons/cbar_hitbod1.wav");
@@ -90,6 +91,11 @@ if( !bm_cbar_mod.value )
 
 void CFlyingCrowbar::SpinTouch( CBaseEntity *pOther )
 {
+if( !bm_cbar_mod.value )
+        {
+        pev->flags = FL_KILLME;
+        return;
+        }
    // We touched something in the game. Look to see if the object
    // is allowed to take damage. 
    if (pOther->pev->takedamage)
@@ -177,6 +183,11 @@ void CFlyingCrowbar::SpinTouch( CBaseEntity *pOther )
 
 void CFlyingCrowbar::BubbleThink( void )
 {
+if( !bm_cbar_mod.value )
+        {
+        pev->flags = FL_KILLME;
+        return;
+        }
    // We have no owner. We do this .25 seconds AFTER the crowbar
    // is thrown so that we don't hit the owner immediately when throwing
    // it. If is comes back later, we want to be able to hit the owner.
