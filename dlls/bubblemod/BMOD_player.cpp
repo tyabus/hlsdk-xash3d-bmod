@@ -588,8 +588,11 @@ void CBasePlayer::BMOD_Identify( void )
 		if (((CBasePlayer *)pOther)->BMOD_IsTyping()) {
 			strcat(szExtra, "\nTyping! DO NOT SHOOT!");
 		}
-
 		CBasePlayer *pOtherPlayer = (CBasePlayer *)pOther;
+		if( FBitSet( pev->effects, EF_NODRAW ) )
+		{
+		return;
+		}
 		if (IsObserver())
 				ClientPrint( pev, HUD_PRINTCENTER, UTIL_VarArgs ("-%s-\n(%s) %i / %i%s", 
 					STRING( pOtherPlayer->pev->netname ), 

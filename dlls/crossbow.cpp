@@ -22,6 +22,7 @@
 #include "nodes.h"
 #include "player.h"
 #include "gamerules.h"
+#include "game.h"
 #include "BMOD_messaging.h"
 
 #ifndef CLIENT_DLL
@@ -90,9 +91,9 @@ void CCrossbowBolt::Spawn()
 			WRITE_SHORT( g_sModelIndexSmoke ); // model
 			WRITE_BYTE( 5 ); // life
 			WRITE_BYTE( 1 ); // width
-			WRITE_BYTE( 100 ); // r, g, b
-			WRITE_BYTE( 100 ); // r, g, b
-			WRITE_BYTE( 200 ); // r, g, b
+			WRITE_BYTE( (int)bm_xbowtracers_r.value ); // r, g, b
+			WRITE_BYTE( (int)bm_xbowtracers_g.value ); // r, g, b
+			WRITE_BYTE( (int)bm_xbowtracers_b.value ); // r, g, b
 			WRITE_BYTE( 255 ); // brightness
 		MESSAGE_END(); // move PHS/PVS data sending into here (SEND_ALL, SEND_PVS, SEND_PHS)
 	}
