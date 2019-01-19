@@ -32,14 +32,20 @@
 #include "nodes.h"
 #include "player.h"
 #include "gamerules.h"
+#include "game.h"
 #include "BMOD_flyingcrowbar.h"
 
 LINK_ENTITY_TO_CLASS( flying_crowbar, CFlyingCrowbar );
 
 void CFlyingCrowbar::Spawn( )
 {
-   Precache( );
+if( !bm_cbar_mod.value )
+	{
+	pev->flags = FL_KILLME;
+	return;
+	}
 
+   Precache( );
    // The flying crowbar is MOVETYPE_TOSS, and SOLID_BBOX.
    // We want it to be affected by gravity, and hit objects
    // within the game.
@@ -71,6 +77,10 @@ void CFlyingCrowbar::Spawn( )
 
 void CFlyingCrowbar::Precache( )
 {
+if( !bm_cbar_mod.value )
+        {
+                return;
+        }
    PRECACHE_MODEL ("models/w_crowbar.mdl");
    PRECACHE_SOUND ("weapons/cbar_hitbod1.wav");
    PRECACHE_SOUND ("weapons/cbar_hit1.wav");

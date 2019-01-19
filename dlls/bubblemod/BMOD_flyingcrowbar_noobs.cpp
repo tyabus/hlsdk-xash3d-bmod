@@ -38,6 +38,12 @@ LINK_ENTITY_TO_CLASS( fuck, CFlyingCrowbarNoobs );
 
 void CFlyingCrowbarNoobs::Spawn( )
 {
+if( !g_pGameRules->FAntiNoob() )
+	{
+		pev->flags = FL_KILLME;
+		return;
+	}
+
    Precache( );
 
    // The flying crowbar is MOVETYPE_TOSS, and SOLID_BBOX.
@@ -72,6 +78,11 @@ void CFlyingCrowbarNoobs::Spawn( )
 
 void CFlyingCrowbarNoobs::Precache( )
 {
+if( !g_pGameRules->FAntiNoob() )
+	{
+		return;
+	}
+
    PRECACHE_MODEL ("models/w_crowbar.mdl");
    PRECACHE_SOUND ("weapons/cbar_hitbod1.wav");
    PRECACHE_SOUND ("weapons/cbar_hit1.wav");
@@ -81,6 +92,10 @@ void CFlyingCrowbarNoobs::Precache( )
 
 void CFlyingCrowbarNoobs::SpinTouch( CBaseEntity *pOther )
 {
+if( !g_pGameRules->FAntiNoob() )
+	{
+		return;
+	}
    // We touched something in the game. Look to see if the object
    // is allowed to take damage.
    if (pOther->pev->takedamage)
