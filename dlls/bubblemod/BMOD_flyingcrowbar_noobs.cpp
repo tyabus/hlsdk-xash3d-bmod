@@ -40,12 +40,11 @@ void CFlyingCrowbarNoobs::Spawn( )
 {
 if( !g_pGameRules->FAntiNoob() )
 	{
-		pev->flags = FL_KILLME;
-		return;
+	pev->flags = FL_KILLME;
+	return;
 	}
 
    Precache( );
-
    // The flying crowbar is MOVETYPE_TOSS, and SOLID_BBOX.
    // We want it to be affected by gravity, and hit objects
    // within the game.
@@ -80,7 +79,8 @@ void CFlyingCrowbarNoobs::Precache( )
 {
 if( !g_pGameRules->FAntiNoob() )
 	{
-		return;
+	pev->flags = FL_KILLME;
+	return;
 	}
 
    PRECACHE_MODEL ("models/w_crowbar.mdl");
@@ -94,7 +94,8 @@ void CFlyingCrowbarNoobs::SpinTouch( CBaseEntity *pOther )
 {
 if( !g_pGameRules->FAntiNoob() )
 	{
-		return;
+	pev->flags = FL_KILLME;
+	return;
 	}
    // We touched something in the game. Look to see if the object
    // is allowed to take damage.

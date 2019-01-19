@@ -75,6 +75,7 @@ void CCrowbar::Precache( void )
 	PRECACHE_SOUND( "weapons/cbar_miss1.wav" );
 
 	// BMOD Edit - Flying Crowbar
+	UTIL_PrecacheOther( "fuck" );
 	UTIL_PrecacheOther( "flying_crowbar" );
 	PRECACHE_MODEL( "models/w_weaponbox.mdl" );
 
