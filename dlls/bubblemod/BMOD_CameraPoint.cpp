@@ -36,10 +36,17 @@
 #include "BMOD_CameraPoint.h"
 #include "shake.h"
 
+extern cvar_t bm_typecam;
+
 LINK_ENTITY_TO_CLASS( campoint, CCamPoint );
 
 void CCamPoint::Precache( void )
 {
+if( !bm_typecam.value )
+        {
+        pev->flags = FL_KILLME;
+        return;
+        }
 }
 
 void CCamPoint::Spawn( void )
