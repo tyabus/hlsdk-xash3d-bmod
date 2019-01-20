@@ -1906,7 +1906,7 @@ void CBasePlayer::PreThink( void )
 	ItemPreFrame();
 	WaterMove();
 
-	m_iHideHUD |= HIDEHUD_FLASHLIGHT;
+	m_iHideHUD &= ~HIDEHUD_FLASHLIGHT;
 
 	// JOHN: checks if new client data (for HUD and view control) needs to be sent to the client
 	UpdateClientData();
