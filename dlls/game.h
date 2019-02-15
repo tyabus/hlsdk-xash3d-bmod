@@ -61,6 +61,7 @@ extern cvar_t	bm_thrust;
 extern cvar_t	bm_spawneffects;
 extern cvar_t	bm_snarktrails;
 extern cvar_t	bm_xbowtracers;
+extern cvar_t	bm_removeflycrowbartime;
 extern cvar_t   bm_xbowtracers_r;
 extern cvar_t   bm_xbowtracers_g;
 extern cvar_t   bm_xbowtracers_b;

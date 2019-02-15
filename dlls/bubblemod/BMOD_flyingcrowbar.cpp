@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------
 // BubbleMod
-// 
+//
 // AUTHOR
 //        Tyler Lund <halflife@bubblemod.org>
 //
@@ -149,7 +149,7 @@ if( !bm_cbar_mod.value )
    pWeaponBox->pev->angles.z = 0;
 
    // remove the weapon box after 3 mins.
-   pWeaponBox->pev->nextthink = gpGlobals->time + 180;
+   pWeaponBox->pev->nextthink = gpGlobals->time + bm_removeflycrowbartime.value;
    pWeaponBox->SetThink( &CWeaponBox::Kill );
 
    // Pack the crowbar in the weapon box

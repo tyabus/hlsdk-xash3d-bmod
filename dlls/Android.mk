@@ -15,7 +15,7 @@ ifeq ($(TARGET_ARCH_ABI),armeabi-v7a-hard)
 LOCAL_MODULE_FILENAME = libserver_hardfp
 endif
 
-LOCAL_CFLAGS += -D_LINUX -DCLIENT_WEAPONS -DBMOD_BUILD_COMMIT=\"$(BMOD_COMMIT)\" -fvisibility=hidden -Dstricmp=strcasecmp -Dstrnicmp=strncasecmp -D_snprintf=snprintf \
+LOCAL_CFLAGS += -O3 -D_LINUX -DCLIENT_WEAPONS -DBMOD_BUILD_COMMIT=\"$(BMOD_COMMIT)\" -fvisibility=hidden -Dstricmp=strcasecmp -Dstrnicmp=strncasecmp -D_snprintf=snprintf \
 	-fno-exceptions -DNO_VOICEGAMEMGR -w
 
 LOCAL_CPPFLAGS := $(LOCAL_CFLAGS)

@@ -468,6 +468,7 @@ cvar_t  bm_spawneffects = { "bm_spawneffects", "1" };
 //cvar_t  bm_snarktrails = { "bm_snarktrails", "1" };
 cvar_t  bm_snarktrails = { "bm_snarktrails", "0AE00AC8" };
 cvar_t  bm_xbowtracers = { "bm_xbowtracers", "1" };
+cvar_t	bm_removeflycrowbartime = { "bm_removeflycrowbartime", "180", FCVAR_SERVER };
 cvar_t  bm_xbowtracers_r = { "bm_xbowtracers_r", "100", FCVAR_UNLOGGED };
 cvar_t  bm_xbowtracers_g = { "bm_xbowtracers_g", "100", FCVAR_UNLOGGED };
 cvar_t  bm_xbowtracers_b = { "bm_xbowtracers_b", "200", FCVAR_UNLOGGED };
@@ -580,6 +581,7 @@ void GameDLLInit( void )
 	CVAR_REGISTER( &defaultteam );
 	CVAR_REGISTER( &bhopcap );
 	CVAR_REGISTER( &antinoobs );
+	CVAR_REGISTER( &bm_removeflycrowbartime );
 
 	CVAR_REGISTER( &mp_chattime );
 
