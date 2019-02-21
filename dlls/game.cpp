@@ -1099,6 +1099,7 @@ void BModCmd_Version( void )
 {
 	printf("Bubblemod+\n");
 	printf("Build time: %s\n", __DATE__);
+	printf("Build compiler: %s version %s\n", CXX, CXX_VER);
 	printf("Build commit: %s\n", BMOD_BUILD_COMMIT);	
 }
 
