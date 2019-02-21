@@ -144,6 +144,7 @@ extern cvar_t	bm_rune_shotty_r;
 
 // BMOD Begin - server commands
 void BModCmd_AdminSay( void );
+void BModCmd_Version( void );
 void BModCmd_AdminWhisper( void );
 void BModCmd_ShowSpawns( void );
 void BModCmd_SpeakAll( void );
