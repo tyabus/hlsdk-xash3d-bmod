@@ -49,6 +49,7 @@ LOCAL_SRC_FILES := agrunt.cpp \
 	   bubblemod/BMOD_flyingcrowbar.cpp \
 	   bubblemod/BMOD_flyingcrowbar_noobs.cpp \
 	   bubblemod/BMOD_gamerules.cpp \
+	   bubblemod/xtree.cpp \
 	   bubblemod/BMOD_messaging.cpp \
 	   bubblemod/BMOD_player.cpp \
 	   bubblemod/BMOD_rune.cpp \
@@ -136,7 +137,6 @@ LOCAL_SRC_FILES := agrunt.cpp \
            util.cpp \
            weapons.cpp \
            world.cpp \
-	   xtree.cpp \
            xen.cpp \
            zombie.cpp \
 	   ../pm_shared/pm_debug.c \
