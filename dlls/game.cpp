@@ -1097,10 +1097,10 @@ CBasePlayer* GetPlayerByUID( int userId )
 // Version
 void BModCmd_Version( void )
 {
-	printf("Bubblemod+\n");
-	printf("Build time: %s\n", __DATE__);
-	printf("Build compiler: %s version %s\n", CXX, CXX_VER);
-	printf("Build commit: %s\n", BMOD_BUILD_COMMIT);	
+	ALERT(at_console, "Bubblemod+\n");
+	ALERT(at_console, "Build time: %s\n", __DATE__);
+	ALERT(at_console, "Build compiler: %s version %s\n", CXX, CXX_VER);
+	ALERT(at_console, "Build commit: %s\n", BMOD_BUILD_COMMIT);	
 }
 
 // Admin Say 

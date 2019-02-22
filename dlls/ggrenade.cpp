@@ -499,6 +499,9 @@ CGrenade *CGrenade::ShootContact( entvars_t *pevOwner, Vector vecStart, Vector v
 	pGrenade->SetThink( &CGrenade::DangerSoundThink );
 	pGrenade->pev->nextthink = gpGlobals->time;
 
+	pGrenade->pev->renderamt = 255;
+	pGrenade->pev->renderfx = kRenderFxGlowShell;
+
 	// Tumble in air
 	pGrenade->pev->avelocity.x = RANDOM_FLOAT( -100, -500 );
 
