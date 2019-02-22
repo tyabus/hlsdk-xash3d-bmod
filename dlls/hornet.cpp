@@ -60,6 +60,9 @@ void CHornet::Spawn( void )
 {
 	Precache();
 
+	pev->renderamt = 255;
+	pev->renderfx = kRenderFxGlowShell;
+
 	pev->movetype = MOVETYPE_FLY;
 	pev->solid = SOLID_BBOX;
 	pev->takedamage = DAMAGE_YES;

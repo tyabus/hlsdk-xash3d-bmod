@@ -72,6 +72,9 @@ void CCrossbowBolt::Spawn()
 	pev->movetype = MOVETYPE_FLY;
 	pev->solid = SOLID_BBOX;
 
+	pev->renderfx = kRenderFxGlowShell;
+	pev->renderamt = 255;
+
 	pev->gravity = 0.5;
 
 	SET_MODEL( ENT( pev ), "models/crossbow_bolt.mdl" );

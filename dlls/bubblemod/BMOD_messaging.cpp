@@ -59,7 +59,7 @@ void PrintMessage( CBaseEntity *pEnt, int iChannel, Vector vecColor, Vector vecT
 
 		// BMOD_PreChangeLevel();
 
-		sprintf(szText, "BUBBLE MOD - http://www.bubblemod.org\n%s Build Commit: %s - %s-%s\n\nCurrent Map: %s\nBHOP Cap: %s\nTime Left: %s\nFrags Left: %i/%i",
+		sprintf(szText, "BUBBLE MOD - http://www.bubblemod.org\n%s Build Commit: %s - %s-%s\n\nCurrent Map: %s\nBHOP Cap: %s\nTime Left: %s\nFrags Limit: %i",
 		BMOD_BRANCH_NAME,
 		BMOD_BRANCH_COMMIT,
 		BMOD_PLATFORM, 
@@ -67,7 +67,6 @@ void PrintMessage( CBaseEntity *pEnt, int iChannel, Vector vecColor, Vector vecT
 		CVAR_GET_STRING("bm_map"), 
 		CVAR_GET_STRING("mp_bhopcap"), 
 		szTime,
-		(int)fragsleft.value,
 		(int)fraglimit.value
 		);
 	}

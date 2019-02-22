@@ -71,6 +71,8 @@
 #define BMOD_ARCH			"i386"
 #elif defined(__arm__) || defined(_M_ARM)
 #define BMOD_ARCH			"arm"
+#elif defined(__mips__)
+#define BMOD_ARCH			"mips"
 #else
 #define BMOD_ARCH			"unknown"
 #endif

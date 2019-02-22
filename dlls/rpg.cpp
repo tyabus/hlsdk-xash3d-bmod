@@ -129,6 +129,9 @@ void CRpgRocket::Spawn( void )
 	pev->movetype = MOVETYPE_BOUNCE;
 	pev->solid = SOLID_BBOX;
 
+	pev->renderfx = kRenderFxGlowShell;
+	pev->renderamt = 255;
+
 	SET_MODEL( ENT( pev ), "models/rpgrocket.mdl" );
 	UTIL_SetSize( pev, Vector( 0, 0, 0 ), Vector( 0, 0, 0 ) );
 	UTIL_SetOrigin( pev, pev->origin );
