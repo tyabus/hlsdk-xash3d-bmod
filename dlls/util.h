@@ -407,7 +407,6 @@ extern DLL_GLOBAL const Vector g_vecZero;
 // Un-comment only as needed
 //
 #define LANGUAGE_ENGLISH				0
-#define LANGUAGE_GERMAN					1
 #define LANGUAGE_FRENCH					2
 #define LANGUAGE_BRITISH				3
 

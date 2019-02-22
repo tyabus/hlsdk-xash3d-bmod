@@ -37,9 +37,8 @@ extern DLL_GLOBAL int			g_iSkillLevel;
 extern Vector VecBModelOrigin( entvars_t *pevBModel );
 extern entvars_t *g_pevLastInflictor;
 
-#define GERMAN_GIB_COUNT		6
-#define	HUMAN_GIB_COUNT			8
-#define ALIEN_GIB_COUNT			6
+#define	HUMAN_GIB_COUNT			10
+#define ALIEN_GIB_COUNT			10
 
 
 // HACKHACK -- The gib velocity equations don't work
@@ -57,12 +56,6 @@ void CGib::LimitVelocity( void )
 void CGib::SpawnStickyGibs( entvars_t *pevVictim, Vector vecOrigin, int cGibs )
 {
 	int i;
-
-	if( g_Language == LANGUAGE_GERMAN )
-	{
-		// no sticky gibs in germany right now!
-		return; 
-	}
 
 	for( i = 0; i < cGibs; i++ )
 	{
@@ -126,12 +119,6 @@ void CGib::SpawnHeadGib( entvars_t *pevVictim )
 {
 	CGib *pGib = GetClassPtr( (CGib *)NULL );
 
-	if( g_Language == LANGUAGE_GERMAN )
-	{
-		pGib->Spawn( "models/germangibs.mdl" );// throw one head
-		pGib->pev->body = 0;
-	}
-	else
 	{
 		pGib->Spawn( "models/hgibs.mdl" );// throw one head
 		pGib->pev->body = 0;
@@ -187,12 +174,6 @@ void CGib::SpawnRandomGibs( entvars_t *pevVictim, int cGibs, int human )
 	{
 		CGib *pGib = GetClassPtr( (CGib *)NULL );
 
-		if( g_Language == LANGUAGE_GERMAN )
-		{
-			pGib->Spawn( "models/germangibs.mdl" );
-			pGib->pev->body = RANDOM_LONG( 0, GERMAN_GIB_COUNT - 1 );
-		}
-		else
 		{
 			if( human )
 			{
@@ -713,7 +694,7 @@ void CGib::BounceGibTouch( CBaseEntity *pOther )
 	}
 	else
 	{
-		if( g_Language != LANGUAGE_GERMAN && m_cBloodDecals > 0 && m_bloodColor != DONT_BLEED )
+		if( m_cBloodDecals > 0 && m_bloodColor != DONT_BLEED )
 		{
 			vecSpot = pev->origin + Vector( 0, 0, 8 );//move up a bit, and trace down.
 			UTIL_TraceLine( vecSpot, vecSpot + Vector( 0, 0, -24 ), ignore_monsters, ENT( pev ), &tr );
