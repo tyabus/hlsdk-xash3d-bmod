@@ -33,7 +33,7 @@ class BMODSquidSpit : public CBaseEntity
 {
 public:
         void Spawn( void );
-		void Precache( void );
+	void Precache( void );
 
         static void Shoot( entvars_t *Owner, Vector vecStart, Vector vecVelocity );
         void Touch( CBaseEntity *pOther );
@@ -160,4 +160,3 @@ void BMODSquidSpit::Touch ( CBaseEntity *pOther )
         SetThink( &CBaseEntity::SUB_Remove );
         pev->nextthink = gpGlobals->time;
 }
-

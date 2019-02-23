@@ -515,7 +515,7 @@ void CGauss::Fire( Vector vecOrigSrc, Vector vecDir, float flDamage )
 
 							// BMOD Edit - tau mod
 							if( bm_tau_mod.value )
-								::RadiusDamage( beam_tr.vecEndPos + vecDir * 8, pev, m_pPlayer->pev, 2, damage_radius, CLASS_NONE, DMG_BLAST );
+								::RadiusDamage( beam_tr.vecEndPos + vecDir * 8, pev, m_pPlayer->pev, 5, damage_radius, CLASS_NONE, DMG_BLAST );
 							else
 								::RadiusDamage( beam_tr.vecEndPos + vecDir * 8, pev, m_pPlayer->pev, flDamage, damage_radius, CLASS_NONE, DMG_BLAST );
 

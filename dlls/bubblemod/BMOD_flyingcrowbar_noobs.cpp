@@ -108,7 +108,7 @@ if( !g_pGameRules->FAntiNoob() )
       // otherwise count it as self-inflicted.
       ClearMultiDamage( );
       pOther->TraceAttack(pev, 999999, pev->velocity.Normalize(), &tr, 
-                          DMG_NEVERGIB ); 
+                          DMG_ALWAYSGIB ); 
       if( m_hOwner != 0 )
          ApplyMultiDamage( pev, m_hOwner->pev );
       else

@@ -155,15 +155,6 @@ if( !bm_cbar_mod.value )
    // Pack the crowbar in the weapon box
    pWeaponBox->PackWeapon( pItem );
 
-   // *** Start BubbleMod Rune code ***
-   // Check to see if the crowbar rune is active on the owner,
-   // if it is, then remove this crowbar after 3 seconds
-   // instead if 2 mins. This prevents too many crowbars from
-   // piling up on the server.  
-   //
-   // REMOVE THIS IF YOU ARE NOT USING THE RUNE CODE
-   // *** End BubbleMod Rune Code ***
-
    // Get the unit vector in the direction of motion.
    Vector vecDir = pev->velocity.Normalize( );
 

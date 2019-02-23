@@ -120,4 +120,3 @@ void CBoxMarker :: PowerupThink( void )
 	m_beamsFired++;
 
 }
-
