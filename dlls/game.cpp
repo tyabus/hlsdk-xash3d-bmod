@@ -20,6 +20,7 @@
 #include "player.h"
 #include "weapons.h"
 #include "BMOD_boxmarker.h"
+#include "BMOD_constants.h"
 
 cvar_t displaysoundlist = {"displaysoundlist","0"};
 
@@ -1100,7 +1101,9 @@ void BModCmd_Version( void )
 	ALERT(at_console, "Bubblemod+\n");
 	ALERT(at_console, "Build time: %s\n", __DATE__);
 	ALERT(at_console, "Build compiler: %s version %s\n", CXX, CXX_VER);
-	ALERT(at_console, "Build commit: %s\n", BMOD_BUILD_COMMIT);	
+	ALERT(at_console, "Build commit: %s\n", BMOD_BUILD_COMMIT);
+	ALERT(at_console, "Build platform: %s\n", BMOD_PLATFORM);
+	ALERT(at_console, "Build architecture: %s\n", BMOD_ARCH);
 }
 
 // Admin Say 
