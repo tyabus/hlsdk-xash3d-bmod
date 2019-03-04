@@ -45,6 +45,7 @@ LOCAL_SRC_FILES := agrunt.cpp \
            bmodels.cpp \
            bullsquid.cpp \
            buttons.cpp \
+	   prop.cpp \
 	   bubblemod/BMOD_boxmarker.cpp \
 	   bubblemod/BMOD_CameraPoint.cpp \
 	   bubblemod/BMOD_egon.cpp \
@@ -52,6 +53,7 @@ LOCAL_SRC_FILES := agrunt.cpp \
 	   bubblemod/BMOD_flyingcrowbar_noobs.cpp \
 	   bubblemod/BMOD_gamerules.cpp \
 	   bubblemod/xtree.cpp \
+	   bubblemod/bottle.cpp \
 	   bubblemod/BMOD_messaging.cpp \
 	   bubblemod/BMOD_player.cpp \
 	   bubblemod/BMOD_rune.cpp \
