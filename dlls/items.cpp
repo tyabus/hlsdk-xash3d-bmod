@@ -61,8 +61,8 @@ void CWorldItem::Spawn( void )
 	case 44: // ITEM_BATTERY:
 		pEntity = CBaseEntity::Create( "item_battery", pev->origin, pev->angles );
 		break;
-	case 42: // ITEM_ANTIDOTE:
-		pEntity = CBaseEntity::Create( "item_antidote", pev->origin, pev->angles );
+	case 42: // ITEM_BATTERY:
+		pEntity = CBaseEntity::Create( "item_battery", pev->origin, pev->angles ); // former antidote
 		break;
 	case 43: // ITEM_SECURITY:
 		pEntity = CBaseEntity::Create( "item_security", pev->origin, pev->angles );
@@ -252,31 +252,6 @@ class CItemBattery : public CItem
 		return FALSE;
 	}
 };
-
-LINK_ENTITY_TO_CLASS( item_battery, CItemBattery )
-
-class CItemAntidote : public CItem
-{
-	void Spawn( void )
-	{ 
-		Precache();
-		SET_MODEL( ENT( pev ), "models/w_antidote.mdl" );
-		CItem::Spawn();
-	}
-	void Precache( void )
-	{
-		PRECACHE_MODEL( "models/w_antidote.mdl" );
-	}
-	BOOL MyTouch( CBasePlayer *pPlayer )
-	{
-		pPlayer->SetSuitUpdate( "!HEV_DET4", FALSE, SUIT_NEXT_IN_1MIN );
-
-		pPlayer->m_rgItems[ITEM_ANTIDOTE] += 1;
-		return TRUE;
-	}
-};
-
-LINK_ENTITY_TO_CLASS( item_antidote, CItemAntidote )
 
 class CItemSecurity : public CItem
 {
