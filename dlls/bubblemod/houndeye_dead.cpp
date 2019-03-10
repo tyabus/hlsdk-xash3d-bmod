@@ -58,7 +58,7 @@ LINK_ENTITY_TO_CLASS(monster_houndeye_dead, CDeadHoundeye);
 void CDeadHoundeye::Spawn(void)
 {
 	PRECACHE_MODEL("models/houndeye_dead.mdl");
-	SET_MODEL(ENT(pev), "models/houndeye_dead.mdl");
+	SET_MODEL(ENT(pev), "models/houndeye_dead.mdl"); // opposing force model
 
 	pev->effects = 0;
 	pev->yaw_speed = 8;

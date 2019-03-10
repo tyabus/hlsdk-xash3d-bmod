@@ -58,7 +58,7 @@ LINK_ENTITY_TO_CLASS(monster_alien_slave_dead, CDeadISlave);
 void CDeadISlave::Spawn(void)
 {
 	PRECACHE_MODEL("models/islave.mdl");
-	SET_MODEL(ENT(pev), "models/islave.mdl");
+	SET_MODEL(ENT(pev), "models/islave.mdl"); // opposing force model
 
 	pev->effects = 0;
 	pev->yaw_speed = 8;

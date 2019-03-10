@@ -45,7 +45,7 @@ void CCleansuitScientist::Spawn(void)
 {
 	Precache();
 
-	SET_MODEL(ENT(pev), "models/cleansuit_scientist.mdl");
+	SET_MODEL(ENT(pev), "models/cleansuit_scientist.mdl"); // opposing force model
 	UTIL_SetSize(pev, VEC_HUMAN_HULL_MIN, VEC_HUMAN_HULL_MAX);
 
 	pev->solid = SOLID_SLIDEBOX;

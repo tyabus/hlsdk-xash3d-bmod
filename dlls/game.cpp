@@ -451,7 +451,6 @@ cvar_t	sk_player_leg3	= { "sk_player_leg3","1" };
 // END Cvars for Skill Level settings
 
 // BMOD Begin - CVARs
-cvar_t  bm_url = { "bm_url", "", FCVAR_SERVER | FCVAR_UNLOGGED };
 
 cvar_t  bm_bver = { "bm_bver", "", FCVAR_SERVER | FCVAR_UNLOGGED };
 cvar_t  bm_bname = { "bm_bname", "", FCVAR_SERVER | FCVAR_UNLOGGED };
@@ -965,7 +964,6 @@ void GameDLLInit( void )
 	CVAR_REGISTER( &bm_bver );
 	CVAR_REGISTER( &bm_bname );
 	CVAR_REGISTER( &bm_burl );
-	CVAR_REGISTER( &bm_url );
 	//CVAR_REGISTER( &bm_plat );
 	CVAR_REGISTER( &bm_guns );
 	CVAR_REGISTER( &bm_ammo );
