@@ -61,9 +61,6 @@ void CWorldItem::Spawn( void )
 	case 44: // ITEM_BATTERY:
 		pEntity = CBaseEntity::Create( "item_battery", pev->origin, pev->angles );
 		break;
-	case 42: // ITEM_BATTERY:
-		pEntity = CBaseEntity::Create( "item_battery", pev->origin, pev->angles ); // former antidote
-		break;
 	case 43: // ITEM_SECURITY:
 		pEntity = CBaseEntity::Create( "item_security", pev->origin, pev->angles );
 		break;
@@ -252,6 +249,8 @@ class CItemBattery : public CItem
 		return FALSE;
 	}
 };
+
+LINK_ENTITY_TO_CLASS( item_battery, CItemBattery )
 
 class CItemSecurity : public CItem
 {

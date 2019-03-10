@@ -35,8 +35,6 @@ void CBottle::Spawn(void)
 
 	Precache();
 
-	SET_MODEL(ENT(pev), "models/winebottle.mdl");
-
 	if( minsH == g_vecZero )
 	{
 		// default barrel parameters
@@ -55,6 +53,7 @@ void CBottle::Spawn(void)
 	if( !m_flRespawnTime )
 		m_flRespawnTime = 80;
 	pev->dmg = 100;
+	//SET_MODEL(ENT(pev), "models/winebottle.mdl");
 	PropRespawn();
 }
 
