@@ -196,7 +196,7 @@ Schedule_t slFaceTargetScared[] =
 
 Task_t tlStopFollowing[] =
 {
-	{ TASK_CANT_FOLLOW, (float)0 },
+	//{ TASK_CANT_FOLLOW, (float)0 },
 };
 
 Schedule_t slStopFollowing[] =

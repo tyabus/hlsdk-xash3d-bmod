@@ -187,6 +187,7 @@ public:
 };
 
 LINK_ENTITY_TO_CLASS( monster_human_grunt, CHGrunt )
+LINK_ENTITY_TO_CLASS( monster_hgrunt, CHGrunt )
 
 TYPEDESCRIPTION	CHGrunt::m_SaveData[] =
 {
@@ -2426,6 +2427,7 @@ void CDeadHGrunt::KeyValue( KeyValueData *pkvd )
 }
 
 LINK_ENTITY_TO_CLASS( monster_hgrunt_dead, CDeadHGrunt )
+LINK_ENTITY_TO_CLASS( monster_human_grunt_dead, CDeadHGrunt )
 
 //=========================================================
 // ********** DeadHGrunt SPAWN **********

@@ -35,6 +35,8 @@ void CBottle::Spawn(void)
 
 	Precache();
 
+	SET_MODEL(ENT(pev), "models/winebottle.mdl");
+
 	if( minsH == g_vecZero )
 	{
 		// default barrel parameters

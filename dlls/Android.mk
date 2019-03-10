@@ -62,6 +62,12 @@ LOCAL_SRC_FILES := agrunt.cpp \
 	   bubblemod/BMOD_tripmines.cpp \
 	   bubblemod/BMOD_util.cpp \
 	   bubblemod/BMOD_zapgunrift.cpp \
+	   bubblemod/islave_dead.cpp \
+	   bubblemod/zombie_barney.cpp \
+	   bubblemod/zombie_soldier.cpp \
+	   bubblemod/skeleton.cpp \
+	   bubblemod/houndeye_dead.cpp \
+	   bubblemod/cleansuit_scientist.cpp \
            cbase.cpp \
            client.cpp \
            combat.cpp \
