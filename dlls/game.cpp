@@ -525,6 +525,9 @@ cvar_t	bm_score_tripmine = { "bm_score_tripmine", "1" };
 cvar_t  bm_map = { "bm_map", "" };
 cvar_t  bm_nextmap = { "bm_nextmap", "", FCVAR_SERVER | FCVAR_UNLOGGED };
 
+cvar_t  bm_arch = { "bm_arch", "", FCVAR_SERVER | FCVAR_UNLOGGED };
+cvar_t  bm_platform = { "bm_platform", "", FCVAR_SERVER | FCVAR_UNLOGGED };
+
 cvar_t  bm_rune_rand = { "bm_rune_rand", "0", FCVAR_SERVER };
 cvar_t  bm_runemask = { "bm_runemask", "63", FCVAR_SERVER };
 
@@ -1099,9 +1102,9 @@ void BModCmd_Version( void )
 	ALERT(at_console, "Bubblemod+\n");
 	ALERT(at_console, "Build time: %s\n", __DATE__);
 	ALERT(at_console, "Build compiler: %s version %s\n", CXX, CXX_VER);
-	ALERT(at_console, "Build commit: %s\n", BMOD_BUILD_COMMIT);
-	ALERT(at_console, "Build platform: %s\n", BMOD_PLATFORM);
-	ALERT(at_console, "Build architecture: %s\n", BMOD_ARCH);
+	ALERT(at_console, "Build commit: %s\n", CVAR_GET_STRING("bm_bver"));
+	ALERT(at_console, "Build platform: %s\n", CVAR_GET_STRING("bm_platform"));
+	ALERT(at_console, "Build architecture: %s\n", CVAR_GET_STRING("bm_arch"));
 }
 
 // Admin Say 

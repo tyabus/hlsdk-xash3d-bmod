@@ -34,8 +34,6 @@
 // Fill this in with the title of your bubblemod branch
 #define BMOD_BRANCH_NAME	"Bubblemod+"
 //
-// The commit of your branch
-#define BMOD_BRANCH_COMMIT	BMOD_BUILD_COMMIT
 
 // The URL of the website describing your branch
 #define BMOD_BRANCH_URL		"https://github.com/tyabus/hlsdk-xash3d-bmod"

@@ -65,6 +65,9 @@ extern cvar_t   bm_xbowtracers_r;
 extern cvar_t   bm_xbowtracers_g;
 extern cvar_t   bm_xbowtracers_b;
 
+extern cvar_t   bm_arch;
+extern cvar_t   bm_platform;
+
 extern cvar_t	bm_spawnkilltime;
 extern cvar_t	bm_maxspawnkills;
 

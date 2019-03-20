@@ -61,9 +61,9 @@ void PrintMessage( CBaseEntity *pEnt, int iChannel, Vector vecColor, Vector vecT
 
 		sprintf(szText, "BUBBLE MOD - http://www.bubblemod.org\n%s Build Commit: %s - %s-%s\n\nCurrent Map: %s\nBHOP Cap: %s\nTime Left: %s\nFrags Limit: %i",
 		BMOD_BRANCH_NAME,
-		BMOD_BRANCH_COMMIT,
-		BMOD_PLATFORM, 
-		BMOD_ARCH,
+		BMOD_BUILD_COMMIT,
+		CVAR_GET_STRING("bm_platform"),
+		CVAR_GET_STRING("bm_arch"),
 		CVAR_GET_STRING("bm_map"), 
 		CVAR_GET_STRING("mp_bhopcap"), 
 		szTime,

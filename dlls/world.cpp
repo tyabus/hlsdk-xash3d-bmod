@@ -30,6 +30,7 @@
 #include "skill.h"
 #include "effects.h"
 #include "player.h"
+#include "BMOD_constants.h"
 #include "weapons.h"
 #include "gamerules.h"
 #include "teamplay_gamerules.h"
@@ -509,10 +510,8 @@ void CWorld::Spawn( void )
 	// no runes yet
 	g_runes_exist = false;
 	g_runes_learn = false;
-	//strcpy(g_NextMap, "");
 	g_VoteStatus = 0;
-	//g_bReplaceWeapons = TRUE;
-	//BMOD End - Init World
+	// BMOD End - Init World
 }
 
 void CWorld::Precache( void )

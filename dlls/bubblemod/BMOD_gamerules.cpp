@@ -360,9 +360,12 @@ void CHalfLifeMultiplay :: BMOD_Think ( void )
 	if (setVarsTime < gpGlobals->time ) 
 	{
 		g_engfuncs.pfnCvar_DirectSet( &bm_bname, UTIL_VarArgs( "%s", BMOD_BRANCH_NAME ) );
-		g_engfuncs.pfnCvar_DirectSet( &bm_bver, UTIL_VarArgs( "%s", BMOD_BRANCH_COMMIT ) );
+		g_engfuncs.pfnCvar_DirectSet( &bm_bver, UTIL_VarArgs( "%s", BMOD_BUILD_COMMIT ) );
 		g_engfuncs.pfnCvar_DirectSet( &bm_burl, UTIL_VarArgs( "%s", BMOD_BRANCH_URL ) );
+		g_engfuncs.pfnCvar_DirectSet( &bm_platform, UTIL_VarArgs( "%s", BMOD_PLATFORM ) );
+		g_engfuncs.pfnCvar_DirectSet( &bm_arch, UTIL_VarArgs( "%s", BMOD_PLATFORM ) );
 		
+
 		BMOD_UpdateGuns();
 		BMOD_UpdateMods();
 	    //UTIL_ClientPrintAll( HUD_PRINTTALK, UTIL_VarArgs( "<SERVER> updated at %f", gpGlobals->time));
