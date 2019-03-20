@@ -30,7 +30,6 @@
 #include "skill.h"
 #include "effects.h"
 #include "player.h"
-#include "BMOD_constants.h"
 #include "weapons.h"
 #include "gamerules.h"
 #include "teamplay_gamerules.h"

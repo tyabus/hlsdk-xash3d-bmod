@@ -965,6 +965,8 @@ void GameDLLInit( void )
 
 	// BMOD Begin - CVARs
 	CVAR_REGISTER( &bm_bver );
+	CVAR_REGISTER( &bm_arch );
+	CVAR_REGISTER( &bm_platform );
 	CVAR_REGISTER( &bm_bname );
 	CVAR_REGISTER( &bm_burl );
 	//CVAR_REGISTER( &bm_plat );
