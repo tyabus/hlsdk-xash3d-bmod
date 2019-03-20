@@ -1055,7 +1055,7 @@ void GameDLLInit( void )
 	// BMOD End - CVARs
 
 	// BMOD Begin - Server commands
-	ADD_SERVER_COMMAND( "version", BModCmd_Version );
+	ADD_SERVER_COMMAND( "bm_version", BModCmd_Version );
 	ADD_SERVER_COMMAND( "s", BModCmd_AdminSay );
 	ADD_SERVER_COMMAND( "w", BModCmd_AdminWhisper );
 	ADD_SERVER_COMMAND( "markspawnpoints", BModCmd_ShowSpawns );
