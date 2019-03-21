@@ -374,7 +374,6 @@ public:
 
 	int	m_RuneFlags;			// Holds which runes this player owns. 
 	float m_RuneTime;			// Time at which this rune wears off. 
-	bool m_bSitted;
 
 	// BMOD End - extra player functions
 	bool m_bSentBhopcap; // If false, the player just joined and needs a bhopcap message.

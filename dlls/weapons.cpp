@@ -302,7 +302,6 @@ void W_Precache( void )
 	UTIL_PrecacheOther( "item_suit" );
 	UTIL_PrecacheOther( "item_healthkit" );
 	UTIL_PrecacheOther( "item_battery" );
-	UTIL_PrecacheOther( "bottle" );
 	UTIL_PrecacheOther( "item_security" );
 	UTIL_PrecacheOther( "item_longjump" );
 	UTIL_PrecacheOther( "item_rune" );

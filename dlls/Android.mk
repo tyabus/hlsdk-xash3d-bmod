@@ -34,6 +34,7 @@ LOCAL_C_INCLUDES := $(SDL_PATH)/include \
 		    $(LOCAL_PATH)/bubblemod
 
 LOCAL_SRC_FILES := agrunt.cpp \
+	   airtank.cpp \
            aflock.cpp \
            animating.cpp \
            animation.cpp \
@@ -41,6 +42,7 @@ LOCAL_SRC_FILES := agrunt.cpp \
            barnacle.cpp \
            barney.cpp \
            bigmomma.cpp \
+	   bloater.cpp \
            bmodels.cpp \
            bullsquid.cpp \
            buttons.cpp \
