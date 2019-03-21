@@ -21,7 +21,7 @@
   I'm pretty sure all this code is obsolete
 
 */
-
+#ifdef OBSOLETE_CONTENT 
 #include	"extdll.h"
 #include	"util.h"
 #include	"cbase.h"
@@ -238,3 +238,4 @@ void CCineBlood :: Spawn ( void )
 	SetUse( &CCineBlood::BloodStart );
 	pev->health = 20;//hacked health to count iterations
 }
+#endif
