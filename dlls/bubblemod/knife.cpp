@@ -23,6 +23,7 @@
 #include "gamerules.h"
 #include "weapons.h"
 #include "unpredictedweapon.h"
+#include "BMOD_messaging.h"
 
 class CKnife : public CBasePlayerWeaponU
 {
@@ -109,6 +110,7 @@ int CKnife::GetItemInfo(ItemInfo *p)
 
 BOOL CKnife::Deploy()
 {
+	PrintMessage( m_pPlayer, BMOD_CHAN_WEAPON, Vector( 20, 250, 20 ), Vector( 1, 4, 2 ), "\nKnife\nNew Weapon." );
 	return DefaultDeploy("models/v_knife.mdl", "models/p_knife.mdl", KNIFE_DRAW, "crowbar");
 }
 
