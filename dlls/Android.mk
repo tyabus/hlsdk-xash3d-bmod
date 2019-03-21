@@ -52,7 +52,6 @@ LOCAL_SRC_FILES := agrunt.cpp \
 	   bubblemod/BMOD_flyingcrowbar_noobs.cpp \
 	   bubblemod/BMOD_gamerules.cpp \
 	   bubblemod/xtree.cpp \
-	   bubblemod/bottle.cpp \
 	   bubblemod/BMOD_messaging.cpp \
 	   bubblemod/BMOD_player.cpp \
 	   bubblemod/BMOD_rune.cpp \
