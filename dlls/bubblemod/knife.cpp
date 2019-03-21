@@ -110,7 +110,7 @@ int CKnife::GetItemInfo(ItemInfo *p)
 
 BOOL CKnife::Deploy()
 {
-	PrintMessage( m_pPlayer, BMOD_CHAN_WEAPON, Vector( 20, 250, 20 ), Vector( 1, 4, 2 ), "\nKnife\nNew Weapon." );
+	PrintMessage( m_pPlayer, BMOD_CHAN_WEAPON, Vector( 20, 250, 20 ), Vector( 1, 4, 2 ), "\nKNIFE\nLeft Slash Does 15 damage.\nRight Slash does 40 damage." );
 	return DefaultDeploy("models/v_knife.mdl", "models/p_knife.mdl", KNIFE_DRAW, "crowbar");
 }
 

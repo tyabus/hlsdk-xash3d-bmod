@@ -41,7 +41,6 @@ LOCAL_SRC_FILES := agrunt.cpp \
            barnacle.cpp \
            barney.cpp \
            bigmomma.cpp \
-           bloater.cpp \
            bmodels.cpp \
            bullsquid.cpp \
            buttons.cpp \
