@@ -74,6 +74,12 @@
 #define BMOD_ARCH			"arm"
 #elif defined(__mips__)
 #define BMOD_ARCH			"mips"
+#elif defined (__powerpc__)
+#define BMOD_ARCH			"powerpc"
+#elif defined (__sparc__)
+#define BMOD_ARCH			"sparc"
+#elif defined (__ia64__)
+#define BMOD_ARCH			"itanium"
 #else
 #define BMOD_ARCH			"unknown"
 #endif
