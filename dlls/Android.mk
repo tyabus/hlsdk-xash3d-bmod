@@ -69,6 +69,7 @@ LOCAL_SRC_FILES := agrunt.cpp \
 	   bubblemod/cleansuit_scientist.cpp \
 	   bubblemod/unpredictedweapon.cpp \
 	   bubblemod/knife.cpp \
+	   bubblemod/diablo.cpp \
            cbase.cpp \
            client.cpp \
            combat.cpp \
