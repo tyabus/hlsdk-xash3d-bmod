@@ -34,7 +34,6 @@
 // Fill this in with the title of your bubblemod branch
 #define BMOD_BRANCH_NAME	"Bubblemod+"
 //
-
 // The URL of the website describing your branch
 #define BMOD_BRANCH_URL		"https://github.com/tyabus/hlsdk-xash3d-bmod"
 
@@ -57,6 +56,10 @@
 #define BMOD_PLATFORM			"NetBSD"
 #elif defined(__OpenBSD__)
 #define BMOD_PLATFORM			"OpenBSD"
+#elif defined(__DragonFly__)
+#define BMOD_PLATFORM			"DragonFly"
+#elif defined(sun) || defined(__sun)
+#define BMOD_PLATFORM			"Solaris"
 #else
 #define BMOD_PLATFORM			"Linux"
 #endif
