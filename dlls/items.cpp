@@ -182,7 +182,7 @@ class CItemSuit : public CItem
 		if( pPlayer->pev->weapons & ( 1<<WEAPON_SUIT ) )
 			return FALSE;
 
-		EMIT_SOUND_SUIT( pPlayer->edict(), "!HEV_AAx" );	// short version of suit logon,
+		EMIT_SOUND_SUIT( pPlayer->edict(), "!HEV_A0" );	// short version of suit logon,
 		
 		pPlayer->pev->weapons |= ( 1 << WEAPON_SUIT );
 		return TRUE;
