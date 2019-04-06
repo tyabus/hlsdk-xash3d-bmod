@@ -92,7 +92,6 @@ extern cvar_t	bm_mods;
 extern cvar_t	bm_cbar_mod;
 extern cvar_t	bm_mp5_mod;
 extern cvar_t	bm_shotty_mod;
-extern cvar_t	bm_xbow_mod;
 extern cvar_t	bm_rpg_mod;
 extern cvar_t	bm_tau_mod;
 extern cvar_t	bm_gluon_mod;

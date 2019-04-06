@@ -494,7 +494,6 @@ cvar_t  bm_maxfrags = { "bm_maxfrags", "100" };
 cvar_t  bm_mods = { "bm_mods", "", FCVAR_SERVER };
 cvar_t  bm_rpg_mod = { "bm_rpg_mod", "1" };
 cvar_t  bm_shotty_mod = { "bm_shotty_mod", "0" };
-cvar_t  bm_xbow_mod = { "bm_xbow_mod", "1" };
 cvar_t  bm_mp5_mod = { "bm_mp5_mod", "1" };
 cvar_t  bm_cbar_mod = { "bm_cbar_mod", "1" };
 cvar_t  bm_tau_mod = { "bm_tau_mod", "1" };
@@ -1027,7 +1026,6 @@ void GameDLLInit( void )
 	CVAR_REGISTER( &bm_mods );
 	CVAR_REGISTER( &bm_rpg_mod );
 	CVAR_REGISTER( &bm_shotty_mod );
-	CVAR_REGISTER( &bm_xbow_mod );
 	CVAR_REGISTER( &bm_mp5_mod );
 	CVAR_REGISTER( &bm_cbar_mod );
 	CVAR_REGISTER( &bm_tau_mod );

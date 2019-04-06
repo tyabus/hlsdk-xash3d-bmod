@@ -29,7 +29,6 @@
 #define BOLT_AIR_VELOCITY	2000
 #define BOLT_WATER_VELOCITY	1000
 
-extern cvar_t  bm_xbow_mod;
 extern cvar_t  bm_xbowtracers;
 
 extern BOOL gPhysicsInterfaceInitialized;
@@ -338,8 +337,7 @@ int CCrossbow::GetItemInfo( ItemInfo *p )
 
 BOOL CCrossbow::Deploy()
 {
-	if( bm_xbow_mod.value )
-		PrintMessage( m_pPlayer, BMOD_CHAN_WEAPON, Vector( 20, 250, 20 ), Vector( 1, 4, 2 ), "\nCROSSBOW\nSniper bolt damage lowered." );
+	PrintMessage( m_pPlayer, BMOD_CHAN_WEAPON, Vector( 20, 250, 20 ), Vector( 1, 4, 2 ), "\nCROSSBOW\nSniper bolt damage lowered." );
 
 	if( m_iClip )
 		return DefaultDeploy( "models/v_crossbow.mdl", "models/p_crossbow.mdl", CROSSBOW_DRAW1, "bow" );
@@ -427,10 +425,8 @@ void CCrossbow::FireSniperBolt()
 		}
 
 		ClearMultiDamage();
-		if( bm_xbow_mod.value )
-			CBaseEntity::Instance( tr.pHit )->TraceAttack( m_pPlayer->pev, 90, vecDir, &tr, DMG_BULLET | DMG_NEVERGIB );
-		else
-			CBaseEntity::Instance( tr.pHit )->TraceAttack( m_pPlayer->pev, 120, vecDir, &tr, DMG_BULLET | DMG_NEVERGIB ); 
+
+		CBaseEntity::Instance( tr.pHit )->TraceAttack( m_pPlayer->pev, 105, vecDir, &tr, DMG_BULLET | DMG_NEVERGIB ); 
 		ApplyMultiDamage( pev, m_pPlayer->pev );
 	}
 

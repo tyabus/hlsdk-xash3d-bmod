@@ -68,7 +68,6 @@ extern cvar_t	bm_g;
 extern cvar_t	bm_cbar_mod;
 extern cvar_t	bm_mp5_mod;
 extern cvar_t	bm_shotty_mod;
-extern cvar_t	bm_xbow_mod;
 extern cvar_t	bm_rpg_mod;
 extern cvar_t	bm_tau_mod;
 extern cvar_t	bm_gluon_mod;
@@ -579,7 +578,6 @@ void CHalfLifeMultiplay :: BMOD_UpdateMods ( void )
 	// bm_cbar_mod
  	// bm_mp5_mod
  	// bm_shotty_mod
- 	// bm_xbow_mod
  	// bm_rpg_mod
  	// bm_tau_mod
  	// bm_gluon_mod
@@ -658,11 +656,6 @@ void CHalfLifeMultiplay :: BMOD_UpdateMods ( void )
 	if (bm_snarks_mod.value) 
 	{
 		mods = mods | (1 << 12);
-	}
-
-	if (bm_xbow_mod.value) 
-	{
-		mods = mods | (1 << 13);
 	}
 	
 
