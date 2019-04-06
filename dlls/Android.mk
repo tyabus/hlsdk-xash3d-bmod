@@ -66,6 +66,7 @@ LOCAL_SRC_FILES := agrunt.cpp \
 	   bubblemod/zombie_soldier.cpp \
 	   bubblemod/skeleton.cpp \
 	   bubblemod/naziflag.cpp \
+	   bubblemod/h_player.cpp \
 	   bubblemod/construction.cpp \
 	   bubblemod/houndeye_dead.cpp \
 	   bubblemod/cleansuit_scientist.cpp \
