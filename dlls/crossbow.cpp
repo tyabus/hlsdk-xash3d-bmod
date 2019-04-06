@@ -23,7 +23,6 @@
 #include "player.h"
 #include "gamerules.h"
 #include "game.h"
-#include "BMOD_messaging.h"
 
 #ifndef CLIENT_DLL
 #define BOLT_AIR_VELOCITY	2000
@@ -337,8 +336,6 @@ int CCrossbow::GetItemInfo( ItemInfo *p )
 
 BOOL CCrossbow::Deploy()
 {
-	PrintMessage( m_pPlayer, BMOD_CHAN_WEAPON, Vector( 20, 250, 20 ), Vector( 1, 4, 2 ), "\nCROSSBOW\nSniper bolt damage lowered." );
-
 	if( m_iClip )
 		return DefaultDeploy( "models/v_crossbow.mdl", "models/p_crossbow.mdl", CROSSBOW_DRAW1, "bow" );
 	return DefaultDeploy( "models/v_crossbow.mdl", "models/p_crossbow.mdl", CROSSBOW_DRAW2, "bow" );
@@ -426,7 +423,7 @@ void CCrossbow::FireSniperBolt()
 
 		ClearMultiDamage();
 
-		CBaseEntity::Instance( tr.pHit )->TraceAttack( m_pPlayer->pev, 105, vecDir, &tr, DMG_BULLET | DMG_NEVERGIB ); 
+		CBaseEntity::Instance( tr.pHit )->TraceAttack( m_pPlayer->pev, 110, vecDir, &tr, DMG_BULLET | DMG_NEVERGIB ); 
 		ApplyMultiDamage( pev, m_pPlayer->pev );
 	}
 
