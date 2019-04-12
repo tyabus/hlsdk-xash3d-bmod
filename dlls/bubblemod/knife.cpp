@@ -91,6 +91,8 @@ void CKnife::Precache(void)
 	PRECACHE_SOUND("weapons/knife1.wav");
 	PRECACHE_SOUND("weapons/knife2.wav");
 	PRECACHE_SOUND("weapons/knife3.wav");
+
+	PRECACHE_GENERIC("sprites/weapon_knife.txt");
 }
 
 int CKnife::GetItemInfo(ItemInfo *p)
