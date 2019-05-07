@@ -1100,11 +1100,12 @@ CBasePlayer* GetPlayerByUID( int userId )
 void BModCmd_Version( void )
 {
 	ALERT(at_console, "Bubblemod+\n");
-	ALERT(at_console, "Build time: %s\n", __DATE__);
-	ALERT(at_console, "Build compiler: %s version %s\n", CXX, CXX_VER);
+	ALERT(at_console, "Build date: %s\n", __DATE__);
+	ALERT(at_console, "Compiled With: %s version %s\n", CXX, CXX_VER);
 	ALERT(at_console, "Build commit: %s\n", CVAR_GET_STRING("bm_bver"));
 	ALERT(at_console, "Build platform: %s\n", CVAR_GET_STRING("bm_platform"));
 	ALERT(at_console, "Build architecture: %s\n", CVAR_GET_STRING("bm_arch"));
+	ALERT(at_warning, "This mod is deprecated!\n");
 }
 
 // Admin Say 
