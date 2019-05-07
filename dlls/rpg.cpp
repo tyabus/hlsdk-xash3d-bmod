@@ -145,8 +145,8 @@ void CRpgRocket::Spawn( void )
 	UTIL_MakeVectors( pev->angles );
 	pev->angles.x = -( pev->angles.x + 30 );
 
-	pev->velocity = gpGlobals->v_forward * 300;
-	pev->gravity = 0.5;
+	pev->velocity = gpGlobals->v_forward * 310;
+	pev->gravity = 0.45;
 
 	pev->nextthink = gpGlobals->time + 0.4;
 
@@ -414,7 +414,7 @@ BOOL CRpg::Deploy()
 	{
 		return DefaultDeploy( "models/v_rpg.mdl", "models/p_rpg.mdl", RPG_DRAW_UL, "rpg" );
 	}
-	g_engfuncs.pfnSetClientMaxspeed(m_pPlayer->edict(), 200 );
+	g_engfuncs.pfnSetClientMaxspeed(m_pPlayer->edict(), 210 );
 	return DefaultDeploy( "models/v_rpg.mdl", "models/p_rpg.mdl", RPG_DRAW1, "rpg" );
 }
 
