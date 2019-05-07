@@ -459,6 +459,7 @@ cvar_t  bm_burl = { "bm_burl", "", FCVAR_SERVER | FCVAR_UNLOGGED };
 cvar_t  bm_guns = { "bm_guns", "crowbar;357;9mmhandgun" };
 cvar_t  bm_ammo = { "bm_ammo", "9mmclip;9mmclip;357;357" };		
 cvar_t  bm_g = { "bm_g", "7", FCVAR_SERVER | FCVAR_UNLOGGED };
+cvar_t	bm_allow_knife = { "bm_allow_knife", "1", FCVAR_SERVER };
 cvar_t  bm_dmg_messages = { "bm_dmg_messages", "1" };
 cvar_t  bm_matchkills = { "bm_matchkills", "1" };
 
@@ -583,6 +584,7 @@ void GameDLLInit( void )
 	CVAR_REGISTER( &defaultteam );
 	CVAR_REGISTER( &bhopcap );
 	CVAR_REGISTER( &antinoobs );
+	CVAR_REGISTER( &bm_allow_knife );
 	CVAR_REGISTER( &bm_removeflycrowbartime );
 
 	CVAR_REGISTER( &mp_chattime );

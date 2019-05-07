@@ -24,6 +24,7 @@
 #include "weapons.h"
 #include "unpredictedweapon.h"
 #include "BMOD_messaging.h"
+#include "game.h"
 
 class CKnife : public CBasePlayerWeaponU
 {
@@ -70,6 +71,11 @@ enum knife_e {
 
 void CKnife::Spawn()
 {
+	if ( !bm_allow_knife.value )
+	{
+		pev->flags = FL_KILLME;
+		return;
+	}
 	Precache();
 	m_iId = WEAPON_KNIFE;
 	SET_MODEL(ENT(pev), "models/w_knife.mdl");
@@ -81,6 +87,10 @@ void CKnife::Spawn()
 
 void CKnife::Precache(void)
 {
+	if ( !bm_allow_knife.value )
+	{
+		return;
+	}
 	PRECACHE_MODEL("models/v_knife.mdl"); // you can use assets from opfor,cs
 	PRECACHE_MODEL("models/w_knife.mdl");
 	PRECACHE_MODEL("models/p_knife.mdl");
@@ -93,6 +103,9 @@ void CKnife::Precache(void)
 	PRECACHE_SOUND("weapons/knife3.wav");
 
 	PRECACHE_GENERIC("sprites/weapon_knife.txt");
+	PRECACHE_GENERIC("sprites/320op.spr");
+	PRECACHE_GENERIC("sprites/640op3.spr");
+	PRECACHE_GENERIC("sprites/640op4.spr");
 }
 
 int CKnife::GetItemInfo(ItemInfo *p)
